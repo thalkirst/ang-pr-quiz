@@ -9,6 +9,9 @@ import { QuizeditorComponent } from './pages/quizeditor/quizeditor.component';
 import { QuestioneditorComponent } from './pages/questioneditor/questioneditor.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ToastrModule } from 'ngx-toastr';
+import { FilterPipe } from './pipe/filter.pipe';
+import { SorterPipe } from './pipe/sorter.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { ToastrModule } from 'ngx-toastr';
     AdminComponent,
     QuizeditorComponent,
     QuestioneditorComponent,
-    HomeComponent
+    HomeComponent,
+    FilterPipe,
+    SorterPipe
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ import { ToastrModule } from 'ngx-toastr';
       timeOut: 3000,
       preventDuplicates: true,
     }),
-
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

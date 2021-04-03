@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin.component';
 import { HomeComponent } from './pages/home/home.component';
+import { QuizeditorComponent } from './pages/quizeditor/quizeditor.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,11 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent
+  },
+
+  {
+    path: 'quiz/:id',
+    component: QuizeditorComponent,
   },
 
   {
