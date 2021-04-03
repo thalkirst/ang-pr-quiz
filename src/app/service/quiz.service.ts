@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 import { Quiz } from '../model/quiz';
@@ -12,7 +13,7 @@ export class QuizService {
   dataUrl: string = `http://localhost:3000/quizzes`;
   list$: BehaviorSubject<Quiz[]> = new BehaviorSubject<Quiz[]>([]);
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private toastr: ToastrService) { }
 
   getAll(): void {
     this.list$.next([]);
@@ -52,6 +53,7 @@ export class QuizService {
     ).subscribe(
       () => this.getAll()
     );
+    this.toastr.error(`Quiz #${quiz.id}</br>${quiz.title}</br>has been deleted.`, 'DELETED');
   }
   
 }

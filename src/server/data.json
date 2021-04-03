@@ -1,603 +1,625 @@
 {
-    "students": [
+  "students": [
+    {
+      "id": 1,
+      "name": "Harry O'Keefe",
+      "email": "harryokeefe@protonmail.com",
+      "points": 0,
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Nicole Harris",
+      "email": "littlenicole@me.biz",
+      "points": 0,
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Andrea Ravelli",
+      "email": "arav@arevelli.ita",
+      "points": 0,
+      "active": true
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "question": "Moore's law originally stated that the number of transistors on a microprocessor chip would double every...",
+      "answers": [
         {
-            "id": 1,
-            "name": "Harry O'Keefe",
-            "email": "harryokeefe@protonmail.com",
-            "points": 0,
-            "active": true
+          "id": 1,
+          "content": "Year",
+          "correct": true
         },
         {
-            "id": 2,
-            "name": "Nicole Harris",
-            "email": "littlenicole@me.biz",
-            "points": 0,
-            "active": true
+          "id": 2,
+          "content": "Four Years",
+          "correct": false
         },
         {
-            "id": 3,
-            "name": "Andrea Ravelli",
-            "email": "arav@arevelli.ita",
-            "points": 0,
-            "active": true
+          "id": 3,
+          "content": "Two Years",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Eight Years",
+          "correct": false
         }
-    ],
-    "questions": [
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 2,
+      "question": "On which computer hardware device is the BIOS chip located?",
+      "answers": [
         {
-            "id": 1,
-            "question": "Moore&#039;s law originally stated that the number of transistors on a microprocessor chip would double every...",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Year",
-                    "correct": true
-                },
-                {
-                    "id": 2,
-                    "content": "Four Years",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Two Years",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Eight Years",
-                    "correct": false
-                }
-            ],
-            "points": 2,
-            "active": true
+          "id": 1,
+          "content": "Hard Disk Drive",
+          "correct": false
         },
         {
-            "id": 2,
-            "question": "On which computer hardware device is the BIOS chip located?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Hard Disk Drive",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Central Processing Unit",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Motherboard",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "content": "Graphics Processing Unit",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
+          "id": 2,
+          "content": "Central Processing Unit",
+          "correct": false
         },
         {
-            "id": 3,
-            "question": "On which day did the World Wide Web go online?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "December 17, 1996",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "December 20, 1990",
-                    "correct": true
-                },
-                {
-                    "id": 3,
-                    "content": "November 12, 1992",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "November 24, 1995",
-                    "correct": false
-                }
-            ],
-            "points": 3,
-            "active": true
+          "id": 3,
+          "content": "Motherboard",
+          "correct": true
         },
         {
-            "id": 4,
-            "question": "Which of these people was NOT a founder of Apple Inc?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Jonathan Ive",
-                    "correct": true
-                },
-                {
-                    "id": 2,
-                    "content": "Steve Jobs",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Ronald Wayne",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Steve Wozniak",
-                    "correct": false
-                }
-            ],
-            "points": 2,
-            "active": true
-        },
-        {
-            "id": 5,
-            "question": "What does the term MIME stand for, in regards to computing?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Multipurpose Interleave Mail Exchange",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Mail Internet Mail Exchange",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Multipurpose Internet Mail Extensions",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "content": "Mail Interleave Method Exchange",
-                    "correct": false
-                }
-            ],
-            "points": 2,
-            "active": true
-        },
-        {
-            "id": 6,
-            "question": "Which of the following is the oldest of these computers by release date?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "TRS-80",
-                    "correct": true
-                },
-                {
-                    "id": 2,
-                    "content": "Commodore 64",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "ZX Spectrum",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Apple 3",
-                    "correct": false
-                }
-            ],
-            "points": 3,
-            "active": true
-        },
-        {
-            "id": 7,
-            "question": "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "PCM Sampler",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Programmable Sound Generator (PSG)",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "FM Synthesizer",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "ADPCM Sampler",
-                    "correct": true
-                }
-            ],
-            "points": 3,
-            "active": true
-        },
-        {
-            "id": 8,
-            "question": "What does the Prt Sc button do?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Nothing",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Captures what&#039;s on the screen and copies it to your clipboard",
-                    "correct": true
-                },
-                {
-                    "id": 3,
-                    "content": "Saves a .png file of what&#039;s on the screen in your screenshots folder in photos",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Closes all windows",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
-        },
-        {
-            "id": 9,
-            "question": "Whistler was the codename of this Microsoft Operating System.",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Windows XP",
-                    "correct": true
-                },
-                {
-                    "id": 2,
-                    "content": "Windows 2000",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Windows 7",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Windows 95",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
-        },
-        {
-            "id": 10,
-            "question": "Which RAID array type is associated with data mirroring?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "RAID 0",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "RAID 10",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "RAID 5",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "RAID 1",
-                    "correct": true
-                }
-            ],
-            "points": 2,
-            "active": true
-        },
-        {
-            "id": 11,
-            "question": "When was the first Call of Duty title released?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "December 1, 2003",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "November 14, 2002",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "July 18, 2004",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "October 29, 2003",
-                    "correct": true
-                }
-            ],
-            "points": 2,
-            "active": true
-        },
-        {
-            "id": 12,
-            "question": "Which of these features was added in the 1994 game &quot;Heretic&quot; that the original &quot;DOOM&quot; could not add due to limitations?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Highly-detailed textures",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Unlimited weapons",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Looking up and down",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "content": "Increased room sizes",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
-        },
-        {
-            "id": 13,
-            "question": "In the original DOOM (1993) which of the following is NOT a cheat code?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "IDFA",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "IDCLIP",
-                    "correct": true
-                },
-                {
-                    "id": 3,
-                    "content": "IDSPISPOPD",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "IDDQD",
-                    "correct": false
-                }
-            ],
-            "points": 2,
-            "active": true
-        },
-        {
-            "id": 14,
-            "question": "How many differently shaped Tetris pieces are there?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "5",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "6",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "7",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "content": "8",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
-        },
-        {
-            "id": 15,
-            "question": "What&#039;s the famous line Vaas says in &quot;Far Cry 3&quot;?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "You&#039;re my b*tch!",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Have I failed to entertain you?",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Maybe your best course...would be to tread lightly.",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Did I ever tell you the definition of insanity?",
-                    "correct": true
-                }
-            ],
-            "points": 2,
-            "active": true
-        },
-        {
-            "id": 16,
-            "question": "In Need For Speed Most Wanted (2005), what do you drive at the beginning of the career mode?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Porsche 911 Turbo",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "BMW M3 GTR",
-                    "correct": true
-                },
-                {
-                    "id": 3,
-                    "content": "Ford Mustang",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Nissan 240SX",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
-        },
-        {
-            "id": 17,
-            "question": "Which one of the first four titles of the &quot;Grand Theft Auto&quot; franchise started the series of iconic image grid cover arts?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Grand Theft Auto",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Grand Theft Auto II",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Grand Theft Auto III",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "content": "Grand Theft Auto IV",
-                    "correct": false
-                }
-            ],
-            "points": 2,
-            "active": true
-        },
-        {
-            "id": 18,
-            "question": "Who is the main protagonist in the game Life is Strange: Before The Storm?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Rachel Amber",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Chloe Price",
-                    "correct": true
-                },
-                {
-                    "id": 3,
-                    "content": "Max Caulfield",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Frank Bowers",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
-        },
-        {
-            "id": 19,
-            "question": "Who was the voice actor for Snake in Metal Gear Solid V: The Phantom Pain?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Kiefer Sutherland",
-                    "correct": true
-                },
-                {
-                    "id": 2,
-                    "content": "David Hayter",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Norman Reedus",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Hideo Kojima",
-                    "correct": false
-                }
-            ],
-            "points": 1,
-            "active": true
-        },
-        {
-            "id": 20,
-            "question": "Which weapon that was cut from the game &quot;Half Life 2&quot; was going to replace the crowbar?",
-            "answers": [
-                {
-                    "id": 1,
-                    "content": "Hunting Knife",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "content": "Wrench",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "content": "Fire Axe",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "content": "Ice Axe",
-                    "correct": true
-                }
-            ],
-            "points": 2,
-            "active": true
+          "id": 4,
+          "content": "Graphics Processing Unit",
+          "correct": false
         }
-    ],
-    "quizzes": [
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 3,
+      "question": "On which day did the World Wide Web go online?",
+      "answers": [
         {
-            "id": 1,
-            "title": "IT Quiz",
-            "description": "A short and diverse quiz about hardware and software related questions.",
-            "questions": [1,2,3,4,5,6,7,8,9,10],
-            "active": true
+          "id": 1,
+          "content": "December 17, 1996",
+          "correct": false
         },
         {
-            "id": 2,
-            "title": "Video Gaming Quiz",
-            "description": "Test your knowledge as a gamer with this 10-question rapid quiz.",
-            "questions": [11,12,13,14,15,16,17,18,19,20],
-            "active": true
+          "id": 2,
+          "content": "December 20, 1990",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "content": "November 12, 1992",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "November 24, 1995",
+          "correct": false
         }
-    ]
+      ],
+      "points": 3,
+      "active": true
+    },
+    {
+      "id": 4,
+      "question": "Which of these people was NOT a founder of Apple Inc?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Jonathan Ive",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Steve Jobs",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Ronald Wayne",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Steve Wozniak",
+          "correct": false
+        }
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 5,
+      "question": "What does the term MIME stand for, in regards to computing?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Multipurpose Interleave Mail Exchange",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Mail Internet Mail Exchange",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Multipurpose Internet Mail Extensions",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "content": "Mail Interleave Method Exchange",
+          "correct": false
+        }
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is the oldest of these computers by release date?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "TRS-80",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Commodore 64",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "ZX Spectrum",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Apple 3",
+          "correct": false
+        }
+      ],
+      "points": 3,
+      "active": true
+    },
+    {
+      "id": 7,
+      "question": "What type of sound chip does the Super Nintendo Entertainment System (SNES) have?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "PCM Sampler",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Programmable Sound Generator (PSG)",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "FM Synthesizer",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "ADPCM Sampler",
+          "correct": true
+        }
+      ],
+      "points": 3,
+      "active": true
+    },
+    {
+      "id": 8,
+      "question": "What does the Prt Sc button do?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Nothing",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Captures what is on the screen and copies it to your clipboard",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "content": "Saves a .png file of what is on the screen in your screenshots folder in photos",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Closes all windows",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 9,
+      "question": "Whistler was the codename of this Microsoft Operating System.",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Windows XP",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "Windows 2000",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Windows 7",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Windows 95",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 10,
+      "question": "Which RAID array type is associated with data mirroring?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "RAID 0",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "RAID 10",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "RAID 5",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "RAID 1",
+          "correct": true
+        }
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 11,
+      "question": "When was the first Call of Duty title released?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "December 1, 2003",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "November 14, 2002",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "July 18, 2004",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "October 29, 2003",
+          "correct": true
+        }
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 12,
+      "question": "Which of these features was added in the 1994 game 'Heretic' that the original 'DOOM' could not add due to limitations?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Highly-detailed textures",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Unlimited weapons",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Looking up and down",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "content": "Increased room sizes",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 13,
+      "question": "In the original DOOM (1993) which of the following is NOT a cheat code?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "IDFA",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "IDCLIP",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "content": "IDSPISPOPD",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "IDDQD",
+          "correct": false
+        }
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 14,
+      "question": "How many differently shaped Tetris pieces are there?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "5",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "6",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "7",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "content": "8",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 15,
+      "question": "What's the famous line Vaas says in 'Far Cry 3'?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "You're my b*tch!",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Have I failed to entertain you?",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Maybe your best course...would be to tread lightly.",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Did I ever tell you the definition of insanity?",
+          "correct": true
+        }
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 16,
+      "question": "In Need For Speed Most Wanted (2005), what do you drive at the beginning of the career mode?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Porsche 911 Turbo",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "BMW M3 GTR",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "content": "Ford Mustang",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Nissan 240SX",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 17,
+      "question": "Which one of the first four titles of the 'Grand Theft Auto' franchise started the series of iconic image grid cover arts?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Grand Theft Auto",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Grand Theft Auto II",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Grand Theft Auto III",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "content": "Grand Theft Auto IV",
+          "correct": false
+        }
+      ],
+      "points": 2,
+      "active": true
+    },
+    {
+      "id": 18,
+      "question": "Who is the main protagonist in the game Life is Strange: Before The Storm?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Rachel Amber",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Chloe Price",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "content": "Max Caulfield",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Frank Bowers",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 19,
+      "question": "Who was the voice actor for Snake in Metal Gear Solid V: The Phantom Pain?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Kiefer Sutherland",
+          "correct": true
+        },
+        {
+          "id": 2,
+          "content": "David Hayter",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Norman Reedus",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Hideo Kojima",
+          "correct": false
+        }
+      ],
+      "points": 1,
+      "active": true
+    },
+    {
+      "id": 20,
+      "question": "Which weapon that was cut from the game 'Half Life 2' was going to replace the crowbar?",
+      "answers": [
+        {
+          "id": 1,
+          "content": "Hunting Knife",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "content": "Wrench",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "content": "Fire Axe",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "content": "Ice Axe",
+          "correct": true
+        }
+      ],
+      "points": 2,
+      "active": true
+    }
+  ],
+  "quizzes": [
+    {
+      "id": 1,
+      "title": "Computer Quiz",
+      "description": "Short and diverse quiz about hardware and software related questions.",
+      "questions": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        3,
+        10,
+        2,
+        1
+      ],
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "Video Gaming Quiz",
+      "description": "For gamers - test your knowledge as a gamer with this 10-question rapid quiz.",
+      "questions": [
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "active": true
+    }
+  ]
 }

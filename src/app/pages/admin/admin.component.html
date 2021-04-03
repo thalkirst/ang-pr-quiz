@@ -1,33 +1,39 @@
-<div class="row" *ngIf="quizList$ | async as quizlist">
-    <div class="col-12 mt-2">
-        <h2>Quiz List</h2>
-        <div class="col-4 my-2 px-0">
-            <input id="phrase" name="phrase" (keyup)="onChangePhrase($event)" class="form-control" type="text"
-                placeholder="Filter by title...">
+<app-navigation></app-navigation>
+<div class="row mx-auto" *ngIf="quizList$ | async as quizlist">
+    <div class="col-12">
+        <h2 class="ml-4 my-4">Quiz List</h2>
+        <div class="my-2 d-flex">
+            <div class="col-4">
+                <input id="phrase" name="phrase" (keyup)="onChangePhrase($event)" class="form-control" type="text"
+                    placeholder="Filter by title OR description...">
+            </div>
+            <button [routerLink]="['quiz/'+'0']" class="btn btn-success">Create new quiz</button>
         </div>
-        <div>
-            <button [routerLink]="['quiz/'+'0']" class="btn btn-primary btn-block mb-2">
-                Create new quiz
-            </button>
-        </div>
+        <small class="ml-3 my-3 form-text text-muted font-italic">Tip: you can sort by certain columns by clicking on their
+            headers.</small>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th (click)="onColumnSelect('id')">#</th>
-                    <th (click)="onColumnSelect('title')">Title</th>
-                    <th (click)="onColumnSelect('description')">Description</th>
-                    <th>Questions</th>
-                    <th (click)="onColumnSelect('active')">Active</th>
-                    <th></th>
+                    <th class="clickable" (click)="onColumnSelect('id')">#</th>
+                    <th class="clickable" (click)="onColumnSelect('title')">Title</th>
+                    <th class="clickable" (click)="onColumnSelect('description')">Description</th>
+                    <th># of Questions</th>
+                    <th class="clickable" (click)="onColumnSelect('active')">Active</th>
+                    <th class="text-info">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let quiz of quizlist | filter:phrase:filterKey | sorter:sorterKey">
+                <tr *ngFor="let quiz of quizlist | filter:phrase | sorter:sorterKey">
                     <td>{{ quiz.id }}</td>
                     <td>{{ quiz.title }}</td>
                     <td>{{ quiz.description }}</td>
-                    <td>{{ quiz.questions }}</td>
-                    <td>{{ quiz.active }}</td>
+                    <td>{{ quiz.questions.length }}</td>
+                    <td *ngIf="quiz.active">
+                        <i class="fa fa-check"></i>
+                    </td>
+                    <td *ngIf="!quiz.active">
+                        <i class="fa fa-times"></i>
+                    </td>
                     <td>
                         <div class="btn-group">
                             <button [routerLink]="['quiz/' + quiz.id]" class="btn btn-info">

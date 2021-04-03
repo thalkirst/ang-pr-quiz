@@ -1,1 +1,106 @@
-<p>quizeditor works!</p>
+<div class="row">
+    <div *ngIf="quiz$ | async as quiz" class="col-6 offset-3 mt-3">
+        <h2 class="my-4 text-center">Update / Create Quiz</h2>
+        <form #quizForm="ngForm">
+            <input name="id" type="hidden" [(ngModel)]="quiz.id">
+            <div class="form-group">
+                <label class="mr-2" for="active">Quiz is active</label>
+                <input class="regular-checkbox" name="active" [(ngModel)]="quiz.active" type="checkbox">
+            </div>
+            <div class="form-group">
+                <label>Title</label>
+                <input class="form-control" type="text" name="title" [(ngModel)]="quiz.title"
+                    pattern="[A-ZÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ](.{3,39})" required>
+                <div [hidden]="quizForm.controls.title?.valid || quizForm.controls.title?.pristine"
+                    class="error-message">
+                    Name must be between 4-40 characters and must start with a capital letter.
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <input class="form-control" type="text" name="description" [(ngModel)]="quiz.description"
+                    pattern=".{8,100}" required>
+                <div [hidden]="quizForm.controls.description?.valid || quizForm.controls.description?.pristine"
+                    class="error-message">
+                    Description must be between 8-100 characters.
+                </div>
+            </div>
+            <div>
+                <h5 class="text-center mt-5 mb-3">Current Questions</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Question</th>
+                            <th># of Answers</th>
+                            <th>Points</th>
+                            <th>Active</th>
+                            <th class="text-info">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let question of questionList$ | async">
+                            <ng-container *ngIf="quiz.questions.includes(question.id)">
+                                <td>{{ question.id }}</td>
+                                <td>{{ question.question }}</td>
+                                <td>{{ question.answers.length }}</td>
+                                <td>{{ question.points }}</td>
+                                <td *ngIf="question.active">
+                                    <i class="fa fa-check"></i>
+                                </td>
+                                <td *ngIf="!question.active">
+                                    <i class="fa fa-times"></i>
+                                </td>
+                                <td>
+                                    <div class="btn-group">
+                                        <button [routerLink]="['question/' + question.id]" class="btn btn-info">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                        <button class="btn btn-warning" (click)="onDeleteQuestion(question, quiz)">
+                                            <i class="fa fa-unlink"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </ng-container>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h5 class="text-center mt-5 mb-3">Unassigned questions that can be added to the quiz</h5>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Question</th>
+                            <th># of Answers</th>
+                            <th>Points</th>
+                            <th class="text-info">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let question of questionList$ | async">
+                            <ng-container *ngIf="!question.active">
+                                <td>{{ question.id }}</td>
+                                <td>{{ question.question }}</td>
+                                <td>{{ question.answers.length }}</td>
+                                <td>{{ question.points }}</td>
+                                <td>
+                                    <button class="btn btn-success" (click)="onAddQuestion(quiz, question)">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </td>
+                            </ng-container>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h5 class="text-center mt-5 mb-3">-- or --</h5>
+            <button [routerLink]="['question/'+'0']" class="btn btn-success mb-3">Create new question</button>
+            <button type="submit" [disabled]="quizForm.invalid" class="btn btn-primary btn-block mt-5"
+                (click)="onUpdate(quiz)">
+                <i class="fa fa-save"></i>
+            </button>
+        </form>
+    </div>
+</div>
