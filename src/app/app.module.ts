@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { AdminComponent } from './admin/admin.component';
-import { QuizeditorComponent } from './quizeditor/quizeditor.component';
-import { QuestioneditorComponent } from './questioneditor/questioneditor.component';
-import { HomeComponent } from './home/home.component';
+import { NavigationComponent } from './pages/navigation/navigation.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { QuizeditorComponent } from './pages/quizeditor/quizeditor.component';
+import { QuestioneditorComponent } from './pages/questioneditor/questioneditor.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,13 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      preventDuplicates: true,
+    }),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
