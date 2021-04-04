@@ -627,6 +627,13 @@
         20
       ],
       "active": true
+    },
+    {
+      "id": 3,
+      "title": "A test quiz",
+      "description": "Just to test",
+      "questions": [],
+      "active": false
     }
   ]
 }

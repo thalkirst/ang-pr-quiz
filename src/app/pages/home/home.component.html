@@ -1,2 +1,28 @@
 <app-navigation></app-navigation>
-<p>home works!</p>
+<div *ngIf="studentList$ | async as studentList">
+    <div class="container selector">
+        <h3 class="my-3">Who Takes a Quiz?</h3>
+        <select class="custom-select" (change)="onChangeStudent($event)">
+            <option selected>Select yourself from the list of students</option>
+            <ng-container *ngFor="let student of studentList">
+                <option [value]="student.id">{{student.name}}</option>
+            </ng-container>
+        </select>
+        <div class="my-3">Not on the list? Ask your teacher to add you to it.</div>
+    </div>
+    <div *ngIf="studentSelected">
+        <div class="container d-flex">
+            <ng-container *ngFor="let quiz of quizList$ | async">
+                <ng-container *ngIf="quiz.active">
+                    <div class="card quizcard mx-2 my-2">
+                        <div class="card-body">
+                            <h5 class="card-title">{{quiz.title}}</h5>
+                            <p class="card-text">{{quiz.description}}</p>
+                            <a [routerLink]="['/quiz/' + quiz.id]" class="card-link">Start quiz</a>
+                        </div>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</div>
