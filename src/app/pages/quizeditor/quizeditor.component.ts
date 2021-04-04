@@ -39,6 +39,18 @@ export class QuizeditorComponent implements OnInit {
     this.questionService.getAll();
   }
 
+  newQuestion(quiz: Quiz): void {
+    this.quizService.update(quiz).subscribe(
+      quiz => this.router.navigate([`admin/quiz/${quiz.id}/question/0`])
+    );
+  }
+
+  editQuestion(quiz: Quiz, question: Question): void {
+    this.quizService.update(quiz).subscribe(
+      quiz => this.router.navigate([`admin/quiz/${quiz.id}/question/${question.id}`])
+    );
+  }
+
   onUpdate(quiz: Quiz): void {
     if (quiz.id === 0) {
       this.quizService.create(quiz);
@@ -50,7 +62,8 @@ export class QuizeditorComponent implements OnInit {
     }
   }
 
-  onDeleteQuestion(question: Question, quiz: Quiz): void {
+
+  onRemoveQuestion(question: Question, quiz: Quiz): void {
     if (confirm(`Are you sure you want to unlink question#${question.id}?
 It will be unassigned from the quiz and deactivated.`)) {
       const index = quiz.questions.indexOf(question.id);
@@ -73,5 +86,14 @@ It will be unassigned from the quiz and deactivated.`)) {
       this.toastr.success(`Question #${question.id} has been assigned to '${quiz.title}'.`, 'ASSIGNED');
     }
   }
+
+  onDeleteQuestion(question: Question): void {
+    if (confirm(`Are you sure you want to delete question#${question.id}?
+This operation cannot be undone!.`)) {
+      this.questionService.remove(question);
+      this.toastr.error(`Question #${question.id} has been permanently deleted.`, 'DELETE');
+    }
+  }
+
 
 }

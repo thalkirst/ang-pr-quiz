@@ -13,6 +13,8 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { StudentListComponent } from './pages/student-list/student-list.component';
+import { StudenteditorComponent } from './pages/studenteditor/studenteditor.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FormsModule } from '@angular/forms';
     QuestioneditorComponent,
     HomeComponent,
     FilterPipe,
-    SorterPipe
+    SorterPipe,
+    StudentListComponent,
+    StudenteditorComponent
   ],
   imports: [
     BrowserModule,

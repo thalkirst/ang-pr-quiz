@@ -1,0 +1,33 @@
+<div class="row">
+    <div *ngIf="student$ | async as student" class="col-6 offset-3 mt-3">
+        <h2 class="my-4 text-center">Update / Create Student</h2>
+        <form #studentForm="ngForm">
+            <input name="id" type="hidden" [(ngModel)]="student.id">
+            <div class="form-group">
+                <label>Name</label>
+                <input class="form-control" type="text" name="name" [(ngModel)]="student.name"
+                    pattern="[A-ZÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ](.{3,99})" required>
+                <div [hidden]="studentForm.controls.name?.valid || studentForm.controls.name?.pristine"
+                    class="error-message">
+                    Name must be between 4-100 characters and must start with a capital letter.
+                </div>
+            </div>
+            <div class="form-group">
+                <label>E-mail address</label>
+                <input class="form-control" type="email" name="email" [(ngModel)]="student.email" [pattern]="emailpattern" required>
+                <div [hidden]="studentForm.controls.email?.valid || studentForm.controls.email?.pristine"
+                    class="error-message">
+                    Must be a valid e-mail address.
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="mr-2" for="active">Student is active</label>
+                <input class="regular-checkbox" name="active" [(ngModel)]="student.active" type="checkbox">
+            </div>
+            <button type="submit" [disabled]="studentForm.invalid" class="btn btn-primary btn-block mt-5"
+            (click)="onUpdate(student)">
+            <i class="fa fa-save"></i>
+        </button>
+        </form>
+    </div>
+</div>
