@@ -4,6 +4,7 @@ import { Student } from 'src/app/model/student';
 import { StudentService } from 'src/app/service/student.service';
 import { Quiz } from 'src/app/model/quiz';
 import { QuizService } from 'src/app/service/quiz.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private studentService: StudentService,
-    private quizService: QuizService
+    private quizService: QuizService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +37,11 @@ export class HomeComponent implements OnInit {
     let selectorItem = document.querySelector('.selector');
     selectorItem?.classList.add('hidden');
     this.studentSelected = true;
+  }
+
+  startQuiz(quiz: Quiz): void {
+    this.router.navigate(['quiz/'+quiz.id], { queryParams: { studentID: this.studentID} });
+
   }
 
 }

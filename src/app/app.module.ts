@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { StudentListComponent } from './pages/student-list/student-list.component';
 import { StudenteditorComponent } from './pages/studenteditor/studenteditor.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
 
 @NgModule({
   declarations: [

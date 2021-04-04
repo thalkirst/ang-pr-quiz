@@ -6,7 +6,7 @@ import { QuestioneditorComponent } from './pages/questioneditor/questioneditor.c
 import { QuizeditorComponent } from './pages/quizeditor/quizeditor.component';
 import { StudentListComponent } from './pages/student-list/student-list.component';
 import { StudenteditorComponent } from './pages/studenteditor/studenteditor.component';
-import { QuizComponent } from './quiz/quiz.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
 
 const routes: Routes = [
   {

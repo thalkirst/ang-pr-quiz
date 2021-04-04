@@ -32,6 +32,7 @@ export class StudentService {
     ).pipe(
       tap(() => {
         this.getAll();
+        console.log('updated');
       })
     );
   }

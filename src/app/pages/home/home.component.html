@@ -11,6 +11,13 @@
         <div class="my-3">Not on the list? Ask your teacher to add you to it.</div>
     </div>
     <div *ngIf="studentSelected">
+        <div>
+            <h3 class="container mt-2">Welcome, {{studentList[studentID-1].name}}!</h3>
+            <div class="container mt-2">
+                Your current points: {{studentList[studentID-1].points}}
+            </div>
+            
+        </div>
         <div class="container d-flex">
             <ng-container *ngFor="let quiz of quizList$ | async">
                 <ng-container *ngIf="quiz.active">
@@ -18,7 +25,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{quiz.title}}</h5>
                             <p class="card-text">{{quiz.description}}</p>
-                            <a [routerLink]="['/quiz/' + quiz.id]" class="card-link">Start quiz</a>
+                            <button class="btn btn-success" (click)="startQuiz(quiz)">Start quiz</button>
                         </div>
                     </div>
                 </ng-container>

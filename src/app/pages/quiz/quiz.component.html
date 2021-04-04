@@ -1,0 +1,58 @@
+<div class="row" *ngIf="allArrived">
+    <div class="col-6 offset-3 mt-3">
+        <div class="text-right">Current points: {{points}} / {{totalPoints}}</div>
+        <h3 class="my-4">{{quiz.title}}</h3>
+        <h4 class="my-4">{{quiz.description}}</h4>
+        <div>Instructions:</div>
+        <div>1) There is no time limit.</div>
+        <div>2) Think about your answer as you cannot revisit them.</div>
+        <div>3) Correct answers are marked with green, incorrect answers are marked with red.</div>
+        <div *ngIf="!completed" class="container mt-3">
+            <div class="mb-2">
+                {{currentQuestion + 1}}. question:
+            </div>
+            <div class="mb-3 font-weight-bold">
+                {{questionArray[currentQuestion].question}}
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="actualQuestion" id="0" checked>
+                <label class="form-check-label" for="0">
+                    {{questionArray[currentQuestion].answers[0].content}}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="actualQuestion" id="1">
+                <label class="form-check-label" for="1">
+                    {{questionArray[currentQuestion].answers[1].content}}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="actualQuestion" id="2">
+                <label class="form-check-label" for="2">
+                    {{questionArray[currentQuestion].answers[2].content}}
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="actualQuestion" id="3">
+                <label class="form-check-label" for="3">
+                    {{questionArray[currentQuestion].answers[3].content}}
+                </label>
+            </div>
+
+
+            <button class="btn btn-success mt-3" (click)="nextQuestion()">
+                Next
+            </button>
+        </div>
+        <div *ngIf="completed" class="container mt-3">
+            <div class="font-weight-bold">
+                Congratulations! You completed the quiz with {{points}} / {{totalPoints}} points!
+                Your points will be added to your running total.
+            </div>
+            <button (click)=addPoints() class="btn btn-primary mt-3">
+                Add Points and Back to Home
+            </button>
+        </div>
+    </div>
+
+</div>

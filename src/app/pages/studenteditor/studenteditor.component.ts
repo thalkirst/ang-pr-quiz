@@ -24,7 +24,7 @@ export class StudenteditorComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private studentService: StudentService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
