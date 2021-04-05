@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Harry O'Keefe",
       "email": "harryokeefe@protonmail.com",
-      "points": 0,
+      "points": 20,
       "active": true
     },
     {
@@ -25,7 +25,7 @@
       "id": 4,
       "name": "Peter Bonyai",
       "email": "titok@titok.hu",
-      "points": 46,
+      "points": 87,
       "active": true
     }
   ],

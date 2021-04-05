@@ -79,18 +79,9 @@ export class QuizComponent implements OnInit {
   nextQuestion(): void {
     this.checkIfCorrect();
     if (this.currentQuestion === this.questionArray.length - 1) {
-      setTimeout(() => {
-        this.completed = true;
-      }, 1000);
-
+      this.completed = true;
     }
-    else {
-      setTimeout(() => {
-        document.querySelector('input[name=actualQuestion]:checked')?.nextElementSibling?.classList.remove('bg-success');
-        document.querySelector('input[name=actualQuestion]:checked')?.nextElementSibling?.classList.remove('bg-danger');
-        this.currentQuestion++;
-      }, 1000);
-    }
+    else this.currentQuestion++;
   }
 
   addPoints(): void {
@@ -98,34 +89,20 @@ export class QuizComponent implements OnInit {
       item => {
         this.student = item;
         this.student.points = this.student.points + this.points;
-        this.studentService.update(this.student).subscribe(student => 
-          {
+        this.studentService.update(this.student).subscribe(student => {
           this.router.navigate([''])
           this.toastr.success(`Your point total has been updated.`, 'COMPLETED');
-          }
-          );
+        }
+        );
       }
     );
-    
+
   }
 
   checkIfCorrect(): void {
     let answer: number = Number(document.querySelector('input[name=actualQuestion]:checked')?.id);
     if (this.questionArray[this.currentQuestion].answers[answer].correct) {
       this.points = this.points + this.questionArray[this.currentQuestion].points;
-      document.querySelector('input[name=actualQuestion]:checked')?.nextElementSibling?.classList.add('bg-success');
-    } else {
-      document.querySelector('input[name=actualQuestion]:checked')?.nextElementSibling?.classList.add('bg-danger');
-      for (let i = 0; i < this.questionArray[this.currentQuestion].answers.length; i++) {
-        if (this.questionArray[this.currentQuestion].answers[i].correct) {
-          let iString = '' + i;
-          const correctAnswer = document.getElementById(iString);
-          correctAnswer?.nextElementSibling?.classList.add('bg-success');
-          setTimeout(() => {
-            correctAnswer?.nextElementSibling?.classList.remove('bg-success')
-          }, 1000);
-        }
-      }
     }
   }
 }
